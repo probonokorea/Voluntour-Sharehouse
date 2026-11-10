@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>볼런투어 셰어하우스 제주점</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page-shell">
+
+    <!-- 1. MINIMAL PILL NAVBAR -->
+    <header class="navbar">
+      <a href="#" class="brand">
+        <img src="assets/images/profile.png" alt="볼런투어 로고" class="brand-logo" />
+        <span class="brand-name">볼런투어 제주<span class="dot">.</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#story">공간 철학</a></li>
+        <li><a href="#rooms">객실 · 요금</a></li>
+        <li><a href="#guide">이용 안내</a></li>
+        <li><a href="#walklife">주변 환경 · 미식</a></li>
+        <li><a href="#reviews">입주 후기</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a href="#contact" class="btn-pill nav-cta">빈방 문의하기 <span class="arrow">→</span></a>
+    </header>
+
+    <!-- MOBILE QUICK NAV (Visible on Mobile Only) -->
+    <nav class="mobile-quick-nav" aria-label="모바일 빠른 메뉴">
+      <a href="#story">공간 철학</a>
+      <a href="#rooms">객실 · 요금</a>
+      <a href="#guide">이용 안내</a>
+      <a href="#walklife">주변 환경</a>
+      <a href="#reviews">입주 후기</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">오시는 길</a>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero reveal">
+      <div>
+        <span class="hero-eyebrow">JEJU SHARE HOUSE · SINCE 2014</span>
+        <h1 class="hero-title">
+          반복되는 일상,<br />
+          쉼표가 필요한<br />
+          당신을 위한 <span class="orange">제주살이.</span>
+        </h1>
+        <p class="hero-desc">
+          지치고 아픈 마음이 쉬어가는 제주시 도심 속 조용한 집.<br class="d-br" />
+          제주공항에서 10분, 차 없이도 편안한 한 달을 시작하세요.
+        </p>
+
+        <a href="#rooms" class="btn-pill">객실 및 요금 보기 <span class="arrow">→</span></a>
+
+        <div class="hero-stats">
+          <div>
+            <span class="stat-value"><strong data-count="10">10</strong><span>분</span></span>
+            <span class="stat-label">제주공항 거리</span>
+          </div>
+          <div>
+            <span class="stat-value"><strong data-count="45">45</strong><span>만 원</span></span>
+            <span class="stat-label">1인실 한 달</span>
+          </div>
+          <div>
+            <span class="stat-value"><strong data-count="22">22</strong><span>시</span></span>
+            <span class="stat-label">파티 없는 정숙</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img id="heroMainImg" src="assets/images/post_224022403951_6.jpg" alt="볼런투어 조용한 복도와 객실 입구" />
+        <div class="hero-thumbs">
+          <div class="hero-thumb active" onclick="setHero(0)">
+            <img src="assets/images/post_224022403951_6.jpg" alt="조용한 복도" />
+            <span>조용한 공간</span>
+          </div>
+          <div class="hero-thumb" onclick="setHero(1)">
+            <img src="assets/images/post_224447931876_4.png" alt="라운지" />
+            <span>공용 라운지</span>
+          </div>
+          <div class="hero-thumb" onclick="setHero(2)">
+            <img src="assets/images/post_224022403951_5.jpg" alt="객실" />
+            <span>아늑한 객실</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECTION: OUR APPROACH -->
+    <section id="story" class="section reveal">
+      <div class="story-grid">
+        <div>
+          <span class="section-label">OUR APPROACH</span>
+          <h2 class="section-title">
+            쉬는 데 필요한 건<br />
+            생각보다 단순합니다
+          </h2>
+
+          <div class="story-list">
+            <button type="button" class="story-item active" onclick="setStory(0)">
+              <div>
+                <span class="story-num">01</span>
+                <span class="story-name">차 없이 편한 공항 10분 도심</span>
+              </div>
+              <span class="story-arrow">↗</span>
+            </button>
+            <button type="button" class="story-item" onclick="setStory(1)">
+              <div>
+                <span class="story-num">02</span>
+                <span class="story-name">부담 없는 월 45만 원 정찰 요금</span>
+              </div>
+              <span class="story-arrow">↗</span>
+            </button>
+            <button type="button" class="story-item" onclick="setStory(2)">
+              <div>
+                <span class="story-num">03</span>
+                <span class="story-name">밤 10시 이후 조용한 내 방</span>
+              </div>
+              <span class="story-arrow">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="story-right">
+          <div class="story-img-frame">
+            <img id="storyImg" src="assets/images/post_224447966248_2.png" alt="공간 이야기" />
+          </div>
+          <div id="storyCaptionBox" class="story-caption">
+            <h3 id="storyTitle">제주공항에서 10분, 도착한 첫날부터 편안한 도심 생활권</h3>
+            <p id="storyDesc">
+              렌터카 없이도 제주공항에서 택시로 10분이면 도착합니다.<br class="d-br" />
+              건물 1층에 약국·편의점·식당이 자리해 차 없이도 하루가 편안합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECTION: ROOMS & PRICING -->
+    <section id="rooms" class="section reveal">
+      <div class="section-split-header">
+        <div>
+          <span class="section-label">SPACES &amp; PRICING</span>
+          <h2 class="section-title">
+            머무는 방식에 맞춘<br />
+            객실 및 한 달 요금
+          </h2>
+        </div>
+        <p class="section-lead">
+          한 달에 한 번만 계산하는 정직한 요금입니다.<br class="d-br" />
+          공과금이 포함된 관리비는 월 3~4만 원이며,<br class="d-br" />
+          보증금은 한 달 방값 기준으로 퇴실 시 반환됩니다.
+        </p>
+      </div>
+
+      <div class="cards-3">
+        <article class="clean-card" onclick="openModal('assets/images/post_224022403951_5.jpg', '1인실 (월 45만 원)', '원목 침대와 침구류, 개인 책상, 에어컨, 사물함이 구비된 조용한 1인 전용 객실입니다.')">
+          <div class="clean-card-img">
+            <img src="assets/images/post_224022403951_5.jpg" alt="1인실" />
+            <span class="clean-badge">개인 프라이버시</span>
+          </div>
+          <div class="clean-card-body">
+            <div class="clean-card-row">
+              <h3 class="clean-card-title">1인실</h3>
+              <span class="clean-card-price">월 45만 원</span>
+            </div>
+            <p class="clean-card-sub">침대 · 원목 데스크 · 개인 사물함 · 에어컨</p>
+          </div>
+        </article>
+
+        <article class="clean-card" onclick="openModal('assets/images/post_224022403951_7.jpg', '2인실 · 다인실 (월 40만 원)', '친구와 함께하는 우정여행, 배낭여행, 소그룹 모임 및 귀농·귀촌 준비에 적합한 실속형 객실입니다.')">
+          <div class="clean-card-img">
+            <img src="assets/images/post_224022403951_7.jpg" alt="2인실 다인실" />
+            <span class="clean-badge">우정 · 배낭여행</span>
+          </div>
+          <div class="clean-card-body">
+            <div class="clean-card-row">
+              <h3 class="clean-card-title">2인실 · 다인실</h3>
+              <span class="clean-card-price">월 40만 원</span>
+            </div>
+            <p class="clean-card-sub">원목 2층침대 · 코너 테이블 · 6칸 락커</p>
+          </div>
+        </article>
+
+        <article class="clean-card" onclick="openModal('assets/images/post_224447931876_5.png', '공용 라운지 · 주방 · 남녀분리 샤워실', '함께 식사를 준비하는 공용주방, 세탁기, 정수기, 원목 서재 라운지 및 남녀가 분리된 화장실·샤워실(비바리 샤워실 등)을 갖추고 있습니다.')">
+          <div class="clean-card-img">
+            <img src="assets/images/post_224447931876_5.png" alt="공용 라운지" />
+            <span class="clean-badge">밤 10시까지 운영</span>
+          </div>
+          <div class="clean-card-body">
+            <div class="clean-card-row">
+              <h3 class="clean-card-title">공용 라운지 · 주방</h3>
+              <span class="clean-card-price">입주자 공용</span>
+            </div>
+            <p class="clean-card-sub">공용주방 · 세탁기 · 서재 · 남녀분리 샤워실</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. DEDICATED SECTION: LIVING GUIDE & AMENITIES -->
+    <section id="guide" class="section reveal">
+      <div class="guide-split-layout">
+        <div class="guide-left">
+          <div>
+            <span class="section-label">LIVING GUIDE &amp; RULES</span>
+            <h2 class="section-title" style="margin-bottom: 18px;">
+              가볍게 몸만 오세요,<br />
+              조용한 일상을 위한<br />
+              준비와 약속
+            </h2>
+            <p style="font-size: 0.96rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 28px;">
+              한달살기 짐 부담을 덜어드리기 위해 필수 가구와<br class="d-br" />
+              주방·세탁 시설을 모두 갖추고 있습니다.<br class="d-br" />
+              서로의 쉼을 존중하는 기본 에티켓으로<br class="d-br" />
+              언제나 고요하고 쾌적한 집을 유지합니다.
+            </p>
+            <a href="#contact" class="btn-pill">입주 상담 신청하기 <span class="arrow">→</span></a>
+          </div>
+
+          <div class="foundation-badge">
+            <div class="foundation-icon">🌿</div>
+            <div>
+              <strong style="font-size: 0.9rem; display:block;">사단법인 프로보노국제협력재단 운영</strong>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">2014년부터 이어온 청년 · 여행자 공유 보금자리</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-2x2">
+          <div class="guide-card">
+            <div class="guide-icon">🛏️</div>
+            <div>
+              <h3>기본 제공 물품</h3>
+              <p>
+                원목 침대 · 침구류 일체 · 개인 사물함 · 책상 · 에어컨<br class="d-br" />
+                고속 Wi-Fi · 공용주방(식기·조리도구) · 세탁기 · 정수기
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-icon">👜</div>
+            <div>
+              <h3>개인 준비물</h3>
+              <p>
+                개인 세면도구(칫솔·치약·수건) · 개인 물품 및 상비약<br class="d-br" />
+                필요한 생필품과 약은 건물 1층 편의점·약국에서 바로 구매 가능
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-icon">🌙</div>
+            <div>
+              <h3>밤 10시 소등 · 파티 없는 집</h3>
+              <p>
+                공용 라운지는 밤 10시(22:00)까지만 운영하며<br class="d-br" />
+                음주 파티 없이 밤에는 모두가 조용히 쉴 수 있도록 합니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="guide-icon">🚭</div>
+            <div>
+              <h3>실내 금연 및 입·퇴실 시간</h3>
+              <p>
+                전 객실 및 실내 절대 금연이며 음식물은 주방에서 취식합니다.<br class="d-br" />
+                입실 시간 15:00~22:00 · 퇴실 시간 11:00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. DEDICATED SECTION: WALKABLE INFRASTRUCTURE -->
+    <section id="walklife" class="section reveal">
+      <div class="section-split-header">
+        <div>
+          <span class="section-label">NEIGHBORHOOD &amp; INFRASTRUCTURE</span>
+          <h2 class="section-title">
+            차 없이도 일상이 이어지는<br />
+            도보 5~10분 주변 환경
+          </h2>
+        </div>
+        <p class="section-lead">
+          제주시 서광로 219 (삼도일동) 중심 생활권입니다.<br class="d-br" />
+          렌터카 없이도 건물 1층의 편의시설부터 해안 산책로까지<br class="d-br" />
+          도보와 대중교통으로 여유롭게 연결됩니다.
+        </p>
+      </div>
+
+      <!-- 거리 타임라인 게이지 바 -->
+      <div class="walk-timeline-track">
+        <div id="walkTimelineFill" class="walk-timeline-fill"></div>
+      </div>
+
+      <!-- 고정 높이 4단 카드 -->
+      <div id="walkInfraGrid" class="walk-infra-grid">
+        <div class="infra-card active" onmouseenter="setInfraFocus(0)" onclick="setInfraFocus(0)">
+          <div class="infra-head">
+            <span class="infra-time">01 · 도보 1분 (건물 1층)</span>
+            <span class="infra-dot"></span>
+          </div>
+          <h4>편의점 &amp; 약국</h4>
+          <p class="infra-desc-inner">
+            건물 1층에 GS25 편의점과 약국이 있어<br class="d-br" />
+            늦은 밤이나 첫날에도 생필품을 바로 구매합니다.
+          </p>
+        </div>
+
+        <div class="infra-card" onmouseenter="setInfraFocus(1)" onclick="setInfraFocus(1)">
+          <div class="infra-head">
+            <span class="infra-time">02 · 도보 3분 (서라사 사거리)</span>
+            <span class="infra-dot"></span>
+          </div>
+          <h4>용천·남서광 버스정류장</h4>
+          <p class="infra-desc-inner">
+            제주공항(332·315·331번) 노선은 물론<br class="d-br" />
+            제주 바다와 오름 어디든 버스로 이동합니다.
+          </p>
+        </div>
+
+        <div class="infra-card" onmouseenter="setInfraFocus(2)" onclick="setInfraFocus(2)">
+          <div class="infra-head">
+            <span class="infra-time">03 · 도보 5~10분 (삼도동)</span>
+            <span class="infra-dot"></span>
+          </div>
+          <h4>로컬 식당 · 병원 · 마트</h4>
+          <p class="infra-desc-inner">
+            도민들이 찾는 동네 식당과 의원, 마트가 밀집해<br class="d-br" />
+            차 없이도 한 달 생활에 불편함이 없습니다.
+          </p>
+        </div>
+
+        <div class="infra-card" onmouseenter="setInfraFocus(3)" onclick="setInfraFocus(3)">
+          <div class="infra-head">
+            <span class="infra-time">04 · 버스 10분 (원도심)</span>
+            <span class="infra-dot"></span>
+          </div>
+          <h4>탑동 바닷가 · 동문시장</h4>
+          <p class="infra-desc-inner">
+            저녁 산책하기 좋은 탑동 해안산책로와<br class="d-br" />
+            동문재래시장이 가까워 제주 일상을 누립니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. DEDICATED DARK SHOWCASE: SAMDO-DONG LOCAL FOOD 5 -->
+    <section class="dark-food-section reveal">
+      <div class="dark-food-header">
+        <div>
+          <span class="section-label" style="color: var(--accent-orange);">LOCAL GOURMET ARCHIVE</span>
+          <h2 class="section-title" style="color: #fff;">
+            가벼운 발걸음으로 만나는<br />
+            삼도동 로컬 맛집 5선
+          </h2>
+        </div>
+        <p>
+          무거운 짐을 내려놓고 도보로 다녀올 수 있는 현지인 검증 식당입니다.<br class="d-br" />
+          카드를 클릭하면 블로그의 상세 메뉴와 위치를 볼 수 있습니다.
+        </p>
+      </div>
+
+      <div class="food-marquee-viewport">
+        <div class="food-marquee-track">
+          <!-- Set 1 -->
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_2.jpg', '태광식당 (제주시 탑동로 142)', '백종원의 3대 천왕에 소개된 맛집. 돼지 주물럭과 한치 주물럭을 반반 섞어 주문할 수 있습니다.')">
+            <img src="assets/images/post_224056334512_2.jpg" alt="태광식당" />
+            <div class="food-card-top"><span class="food-pill-tag">백종원의 3대 천왕</span></div>
+            <div class="food-card-bottom">
+              <h4>태광식당</h4>
+              <p>흑돼지 · 한치 주물럭 반반</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_4.jpg', '대우정 (제주시 서사로 152)', '블루리본 서베이 수록 맛집. 통통한 전복돌솥밥과 고소한 갈치돌솥밥이 유명합니다.')">
+            <img src="assets/images/post_224056334512_4.jpg" alt="대우정" />
+            <div class="food-card-top"><span class="food-pill-tag">블루리본 맛집</span></div>
+            <div class="food-card-bottom">
+              <h4>대우정</h4>
+              <p>전복돌솥밥 · 갈치돌솥밥</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_7.jpg', '천하제일오라방', '푸짐한 고명과 쫄깃한 면발의 고기국수 & 얼큰한 해장용 뻘건고기국수 맛집입니다.')">
+            <img src="assets/images/post_224056334512_7.jpg" alt="천하제일오라방" />
+            <div class="food-card-top"><span class="food-pill-tag">고기국수 신흥강자</span></div>
+            <div class="food-card-bottom">
+              <h4>천하제일오라방</h4>
+              <p>고기국수 · 뻘건고기국수</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_8.jpg', '제주한라식당본점 (제주시 광양9길 19)', '맑고 시원한 옥돔뭇국과 구수한 갈치국, 몸국으로 부모님·가족 동반 시 특히 인기 있는 향토 식당입니다.')">
+            <img src="assets/images/post_224056334512_8.jpg" alt="제주한라식당" />
+            <div class="food-card-top"><span class="food-pill-tag">제주 향토음식</span></div>
+            <div class="food-card-bottom">
+              <h4>제주한라식당본점</h4>
+              <p>옥돔뭇국 · 갈치국 · 몸국</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_10.jpg', '효퇴국수국밥 (제주시 서사로 122-1)', '아침 식사나 해장으로 부담 없이 든든한 한 끼를 즐길 수 있는 도민 소울푸드 고기국수집입니다.')">
+            <img src="assets/images/post_224056334512_10.jpg" alt="효퇴국수국밥" />
+            <div class="food-card-top"><span class="food-pill-tag">도민 소울푸드</span></div>
+            <div class="food-card-bottom">
+              <h4>효퇴국수국밥</h4>
+              <p>아침 해장 고기국수</p>
+            </div>
+          </div>
+
+          <!-- Set 2 (Duplicate for seamless infinite loop) -->
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_2.jpg', '태광식당 (제주시 탑동로 142)', '백종원의 3대 천왕에 소개된 맛집. 돼지 주물럭과 한치 주물럭을 반반 섞어 주문할 수 있습니다.')">
+            <img src="assets/images/post_224056334512_2.jpg" alt="태광식당" />
+            <div class="food-card-top"><span class="food-pill-tag">백종원의 3대 천왕</span></div>
+            <div class="food-card-bottom">
+              <h4>태광식당</h4>
+              <p>흑돼지 · 한치 주물럭 반반</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_4.jpg', '대우정 (제주시 서사로 152)', '블루리본 서베이 수록 맛집. 통통한 전복돌솥밥과 고소한 갈치돌솥밥이 유명합니다.')">
+            <img src="assets/images/post_224056334512_4.jpg" alt="대우정" />
+            <div class="food-card-top"><span class="food-pill-tag">블루리본 맛집</span></div>
+            <div class="food-card-bottom">
+              <h4>대우정</h4>
+              <p>전복돌솥밥 · 갈치돌솥밥</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_7.jpg', '천하제일오라방', '푸짐한 고명과 쫄깃한 면발의 고기국수 & 얼큰한 해장용 뻘건고기국수 맛집입니다.')">
+            <img src="assets/images/post_224056334512_7.jpg" alt="천하제일오라방" />
+            <div class="food-card-top"><span class="food-pill-tag">고기국수 신흥강자</span></div>
+            <div class="food-card-bottom">
+              <h4>천하제일오라방</h4>
+              <p>고기국수 · 뻘건고기국수</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_8.jpg', '제주한라식당본점 (제주시 광양9길 19)', '맑고 시원한 옥돔뭇국과 구수한 갈치국, 몸국으로 부모님·가족 동반 시 특히 인기 있는 향토 식당입니다.')">
+            <img src="assets/images/post_224056334512_8.jpg" alt="제주한라식당" />
+            <div class="food-card-top"><span class="food-pill-tag">제주 향토음식</span></div>
+            <div class="food-card-bottom">
+              <h4>제주한라식당본점</h4>
+              <p>옥돔뭇국 · 갈치국 · 몸국</p>
+            </div>
+          </div>
+
+          <div class="food-photo-card" onclick="openModal('assets/images/post_224056334512_10.jpg', '효퇴국수국밥 (제주시 서사로 122-1)', '아침 식사나 해장으로 부담 없이 든든한 한 끼를 즐길 수 있는 도민 소울푸드 고기국수집입니다.')">
+            <img src="assets/images/post_224056334512_10.jpg" alt="효퇴국수국밥" />
+            <div class="food-card-top"><span class="food-pill-tag">도민 소울푸드</span></div>
+            <div class="food-card-bottom">
+              <h4>효퇴국수국밥</h4>
+              <p>아침 해장 고기국수</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. DEDICATED SECTION: GUEST REVIEWS -->
+    <section id="reviews" class="section reveal">
+      <div class="section-split-header">
+        <div>
+          <span class="section-label">VOICES FROM GUESTS</span>
+          <h2 class="section-title">
+            이 집에서 한 달을<br />
+            머문 분들의 이야기
+          </h2>
+        </div>
+        <p class="section-lead">
+          2014년부터 제주시 서광로에서 많은 여행자와 청년, 가족분들이<br class="d-br" />
+          지친 마음을 내려놓고 다시 일상으로 돌아갈 힘을 얻어갔습니다.
+        </p>
+      </div>
+
+      <div class="reviews-grid-3">
+        <div class="review-card">
+          <p class="review-quote">
+            "외곽 바다 앞 숙소에 갔을 땐 렌터카와 숙소비 때문에<br class="d-br" />
+            쉬러 가서 더 지쳤는데, 여기는 공항에서 10분 거리라<br class="d-br" />
+            도착한 첫날부터 건물 1층의 편의점과 약국을<br class="d-br" />
+            바로 이용할 수 있어 마음이 놓였습니다."
+          </p>
+          <span class="review-meta">제주 한달살기 · 1인실 입주자</span>
+        </div>
+
+        <div class="review-card">
+          <p class="review-quote">
+            "낮에는 버스를 타고 바다나 오름에 다녀오고,<br class="d-br" />
+            밤 10시 이후엔 파티 없이 조용한 내 방으로 돌아와<br class="d-br" />
+            아무 방해 없이 푹 쉬었습니다. 관광객이 아니라<br class="d-br" />
+            제주로 일상을 잠시 옮긴 사람 같았어요."
+          </p>
+          <span class="review-meta">쉼표 여행 · 장기 체류 입주자</span>
+        </div>
+
+        <div class="review-card">
+          <p class="review-quote">
+            "어머님을 모시고 제주에 왔는데 매니저님이 알려주신<br class="d-br" />
+            근처 한라식당 옥돔뭇국을 어머님이 정말 좋아하셨어요.<br class="d-br" />
+            화려하진 않지만 소박하고 진심이 느껴지는<br class="d-br" />
+            따뜻한 보금자리입니다."
+          </p>
+          <span class="review-meta">가족 힐링 여행 &amp; 귀농·귀촌 준비 방문객</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. DEDICATED SECTION: FAQ -->
+    <section id="faq" class="section reveal">
+      <div class="faq-split-layout">
+        <div>
+          <span class="section-label">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title" style="margin-bottom: 16px;">
+            입주 전 자주 묻는<br />
+            질문과 답변
+          </h2>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75;">
+            더 궁금하신 점이나 실시간 빈방 현황은<br class="d-br" />
+            언제든 매니저 직통 번호(070-4670-7004)로<br class="d-br" />
+            편하게 문의해 주세요.
+          </p>
+        </div>
+
+        <div class="faq-stack">
+          <div class="faq-item open">
+            <button type="button" class="faq-q" onclick="toggleFaq(this)">
+              <span>Q. 한 달 미만 단기나 두 달 이상 장기 거주도 가능한가요?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a">
+                네, 한달살기뿐 아니라 단기 체류 및 귀농·귀촌 준비를 위한 장기 거주 모두 환영합니다.<br class="d-br" />
+                빈방 현황과 희망 입주 날짜는 전화(070-4670-7004)나 카톡 채널로 편하게 문의해 주세요.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q" onclick="toggleFaq(this)">
+              <span>Q. 화장실과 샤워실은 남녀가 분리되어 있나요?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a">
+                네, 남녀 화장실과 샤워실('비바리 샤워실' 등)이 철저히 분리되어 운영되며,<br class="d-br" />
+                공용 세탁기와 정수기, 공용주방도 자유롭게 이용하실 수 있습니다.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q" onclick="toggleFaq(this)">
+              <span>Q. 보증금과 관리비 정산은 어떻게 하나요?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a">
+                방값은 1인실 월 45만 원, 2인실·다인실 월 40만 원이며 관리비는 월 3~4만 원입니다.<br class="d-br" />
+                보증금은 한 달 방값 기준이며 퇴실 시 이상이 없으면 전액 반환됩니다.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q" onclick="toggleFaq(this)">
+              <span>Q. 늦은 비행기로 도착해도 입실할 수 있나요?</span>
+              <span class="plus">+</span>
+            </button>
+            <div class="faq-a-wrap">
+              <div class="faq-a">
+                입주가 확정되면 카카오톡으로 출입 비밀번호와 입실 방법을 미리 안내해 드립니다.<br class="d-br" />
+                도착 시간을 맞추느라 누군가를 기다릴 필요 없이 편하게 입실하실 수 있습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. LOCATION & CONTACT BANNER -->
+    <section id="contact" class="contact-banner reveal">
+      <div>
+        <span class="section-label">LOCATION &amp; CONTACT</span>
+        <h2 class="section-title">오시는 길 및 입주 문의</h2>
+
+        <div class="route-pills">
+          <div class="route-pill">
+            <strong>📍 주소</strong>
+            제주시 서광로 219, 2층 (1층 약국·편의점 건물)
+          </div>
+          <div class="route-pill">
+            <strong>🚕 택시 이용 시</strong>
+            제주공항 승강장에서 약 10분 소요
+          </div>
+          <div class="route-pill">
+            <strong>🚌 버스 이용 시</strong>
+            332·315·331번 (용천/남서광마을 하차 도보 3분)
+          </div>
+          <div class="route-pill">
+            <strong>🚗 자차 주차 안내</strong>
+            건물 지하 1층 주차장 이용 가능
+          </div>
+        </div>
+
+        <button type="button" class="btn-pill" onclick="copyText('제주특별자치도 제주시 서광로 219', '주소')">
+          주소 복사하기 (제주시 서광로 219) <span class="arrow">→</span>
+        </button>
+      </div>
+
+      <div class="contact-cards-stack">
+        <a href="tel:070-4670-7004" class="contact-pill-card" onclick="copyText('070-4670-7004', '전화번호')">
+          <div>
+            <strong style="font-size: 1.08rem; display:block;">📞 070-4670-7004</strong>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">빈방 및 입주일 전화 문의 (클릭 시 번호 복사)</span>
+          </div>
+          <span>→</span>
+        </a>
+
+        <a href="https://blog.naver.com/probono8" target="_blank" rel="noopener" class="contact-pill-card">
+          <div>
+            <strong style="font-size: 1.02rem; display:block;">📝 공식 네이버 블로그</strong>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">blog.naver.com/probono8</span>
+          </div>
+          <span>↗</span>
+        </a>
+
+        <a href="https://www.instagram.com/voluntour" target="_blank" rel="noopener" class="contact-pill-card">
+          <div>
+            <strong style="font-size: 1.02rem; display:block;">📸 인스타그램 · 카톡 채널 문의</strong>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">@voluntour</span>
+          </div>
+          <span>↗</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer-minimal">
+      <span>© 볼런투어 셰어하우스 제주점 (사단법인 프로보노국제협력재단) · 제주특별자치도 제주시 서광로 219 (삼도일동 535-30), 2F</span>
+      <span>문의 070-4670-7004</span>
+    </footer>
+
+  </div>
+
+  <!-- SIMPLE MODAL -->
+  <div id="detailModal" class="modal-backdrop" onclick="closeModal(event)">
+    <div class="modal-card">
+      <img id="modalImg" src="assets/images/post_224022403951_5.jpg" alt="상세 보기" />
+      <div class="modal-body">
+        <h3 id="modalTitle" style="font-size: 1.15rem; font-weight: 800; margin-bottom: 6px;"></h3>
+        <p id="modalDesc" style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px;"></p>
+        <button type="button" class="btn-pill modal-close-btn" onclick="closeModal(event)">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastMsg" class="toast"></div>
+
+  <!-- FLOATING LIVE TEXT EDITOR DOCK -->
+  <div id="editorDock" class="editor-dock">
+    <button type="button" id="editToggleBtn" class="editor-btn primary" onclick="toggleEditMode()">
+      ✏️ 화면에서 바로 글씨 수정
+    </button>
+    <div class="editor-sub-actions">
+      <button type="button" class="editor-btn" onclick="downloadEditedHtml()" title="수정한 내용이 반영된 HTML 파일 저장">
+        💾 파일로 저장
+      </button>
+      <button type="button" class="editor-btn" onclick="resetEdits()" title="원래 문구로 초기화">
+        ↩️ 초기화
+      </button>
+      <span class="editor-hint">글씨 클릭 후 바로 타이핑 · Enter로 줄바꿈 (자동 임시저장됨)</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
